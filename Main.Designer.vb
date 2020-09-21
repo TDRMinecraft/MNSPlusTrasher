@@ -32,7 +32,7 @@ Partial Class Form
         Me.LSDbtn = New System.Windows.Forms.Button()
         Me.CMD = New System.Windows.Forms.Button()
         Me.Silent = New System.Windows.Forms.CheckBox()
-        Me.BlackBtn = New System.Windows.Forms.Button()
+        Me.MGMBtn = New System.Windows.Forms.Button()
         Me.ProcessesBtn = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.UnlockPCBtn = New System.Windows.Forms.Button()
@@ -43,6 +43,7 @@ Partial Class Form
         Me.MinimizeBtn = New System.Windows.Forms.Button()
         Me.CloseBtn = New System.Windows.Forms.Button()
         Me.MainPanel = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.InfoBtn = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -162,24 +163,25 @@ Partial Class Form
         Me.ToolTip1.SetToolTip(Me.Silent, "Hide Temporary Files")
         Me.Silent.UseVisualStyleBackColor = False
         '
-        'BlackBtn
+        'MGMBtn
         '
-        Me.BlackBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
-        Me.BlackBtn.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BlackBtn.FlatAppearance.BorderSize = 0
-        Me.BlackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BlackBtn.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BlackBtn.ForeColor = System.Drawing.Color.Snow
-        Me.BlackBtn.Image = CType(resources.GetObject("BlackBtn.Image"), System.Drawing.Image)
-        Me.BlackBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BlackBtn.Location = New System.Drawing.Point(0, 264)
-        Me.BlackBtn.Name = "BlackBtn"
-        Me.BlackBtn.Size = New System.Drawing.Size(108, 36)
-        Me.BlackBtn.TabIndex = 5
-        Me.BlackBtn.Text = " Blackout"
-        Me.BlackBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ToolTip1.SetToolTip(Me.BlackBtn, "Blackout Screen On TeacherConsole")
-        Me.BlackBtn.UseVisualStyleBackColor = False
+        Me.MGMBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(111, Byte), Integer))
+        Me.MGMBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.MGMBtn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.MGMBtn.FlatAppearance.BorderSize = 0
+        Me.MGMBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MGMBtn.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MGMBtn.ForeColor = System.Drawing.Color.Snow
+        Me.MGMBtn.Image = CType(resources.GetObject("MGMBtn.Image"), System.Drawing.Image)
+        Me.MGMBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.MGMBtn.Location = New System.Drawing.Point(0, 264)
+        Me.MGMBtn.Name = "MGMBtn"
+        Me.MGMBtn.Size = New System.Drawing.Size(108, 36)
+        Me.MGMBtn.TabIndex = 5
+        Me.MGMBtn.Text = " Blackout"
+        Me.MGMBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ToolTip1.SetToolTip(Me.MGMBtn, "Blackout Screen On TeacherConsole")
+        Me.MGMBtn.UseVisualStyleBackColor = False
         '
         'ProcessesBtn
         '
@@ -269,9 +271,9 @@ Partial Class Form
         Me.Title.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Title.Location = New System.Drawing.Point(3, 6)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(156, 15)
+        Me.Title.Size = New System.Drawing.Size(242, 15)
         Me.Title.TabIndex = 2
-        Me.Title.Text = "MNS+ Trasher @BOS 2020"
+        Me.Title.Text = "MNS+ Trasher - MGM-Monschau Version"
         '
         'MinimizeBtn
         '
@@ -303,6 +305,7 @@ Partial Class Form
         '
         'MainPanel
         '
+        Me.MainPanel.Controls.Add(Me.Button1)
         Me.MainPanel.Controls.Add(Me.ProcessesBtn)
         Me.MainPanel.Controls.Add(Me.CMD)
         Me.MainPanel.Controls.Add(Me.LSDbtn)
@@ -317,6 +320,19 @@ Partial Class Form
         Me.MainPanel.Size = New System.Drawing.Size(400, 300)
         Me.MainPanel.TabIndex = 7
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Constantia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Snow
+        Me.Button1.Location = New System.Drawing.Point(246, 264)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(131, 24)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "MGM-Monschau Tools"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Sidebar
         '
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(140, Byte), Integer))
@@ -324,7 +340,7 @@ Partial Class Form
         Me.Sidebar.Controls.Add(Me.Panel1)
         Me.Sidebar.Controls.Add(Me.SharesBtn)
         Me.Sidebar.Controls.Add(Me.DashboardBtn)
-        Me.Sidebar.Controls.Add(Me.BlackBtn)
+        Me.Sidebar.Controls.Add(Me.MGMBtn)
         Me.Sidebar.Dock = System.Windows.Forms.DockStyle.Left
         Me.Sidebar.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Sidebar.Location = New System.Drawing.Point(0, 27)
@@ -437,7 +453,7 @@ Partial Class Form
     Friend WithEvents Volume As Button
     Friend WithEvents PatchTCBtn As Button
     Friend WithEvents PowerShell As Button
-    Friend WithEvents BlackBtn As Button
+    Friend WithEvents MGMBtn As Button
     Friend WithEvents LSDbtn As Button
     Friend WithEvents CMD As Button
     Friend WithEvents Silent As CheckBox
@@ -457,4 +473,5 @@ Partial Class Form
     Friend WithEvents SilentLbl As Label
     Private WithEvents InfoBtn As Button
     Friend WithEvents ProcessesBtn As Button
+    Friend WithEvents Button1 As Button
 End Class

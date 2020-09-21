@@ -47,7 +47,9 @@ Public Class Form
                 End If
             End If
 
-            MsgBox("    MNSPlusTrasher is designed to show flaws in systems using MNS+
+            MsgBox(
+  " MNS+ Trasher for MGM-Monschau
+    MNSPlusTrasher is designed to show flaws in systems using MNS+
     Copyright (C) 2019  Bastian Oliver Schwickert
 
     This program is free software: you can redistribute it and/or modify
@@ -63,6 +65,14 @@ Public Class Form
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see 
     <https://www.gnu.org/licenses/>.", vbOKOnly, "MNSPlusTrasher")
+        End If
+    End Sub
+
+    Private Sub MGMBtn_Click(sender As Object, e As EventArgs) Handles MGMBtn.Click
+        If LSD.IsHandleCreated Then
+            LSD.Close()
+        Else
+            LSD.Show()
         End If
     End Sub
 
@@ -100,7 +110,7 @@ Public Class Form
         Process.Start(DesktopPath & "\PowerSH.cmd")
     End Sub
 
-    Private Sub BlackBtn_Click(sender As Object, e As EventArgs) Handles BlackBtn.Click
+    Private Sub BlackBtn_Click(sender As Object, e As EventArgs) Handles MGMBtn.Click
         If (Process.GetCurrentProcess().ProcessName = "TeacherConsole") Then
             If Black.IsHandleCreated Then
                 Black.Close()
@@ -122,6 +132,8 @@ Do You Want To Proceed?", 48 + 1, "Warning!") = MsgBoxResult.Ok Then
             LSD.Show()
         End If
     End Sub
+
+
 
     Private Sub MapPublicLehrer_Click(sender As Object, e As EventArgs)
         If objFSO.FolderExists("L:") Then
